@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+html {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height: 100%;
+    font-size: 1.3em;
+    color: #252525;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    word-break: break-word;
+    background: transparent;
+}
+
+i {
+    margin-right: 10px;
+}
+
+button {
+    color: #fff;
+    background: #AE7947;
+    border: none;
+    padding: 1.5vh 3vw;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #E7951F;
+    transition: background 0.5s ease-out;
+}
+
+ul {
+    list-style: none;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #AE7947;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+#top .content {
+    height: 50px;
+    line-height: 50px;
+}
+
+#top a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1vw;
+}
+
+#top .header-title {
+    float: left;
+    display: block;
+    margin-left: 10vw;
+}
+
+#top .header-title .logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+#top nav {
+    float: right;
+    margin-right: 10vw;
+}
+
+#top nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#top nav li {
+    display: inline-block;
+}
+
+#top nav li:after {
+    content: ' | ';
+    color: #fff;
+}
+
+#top nav li:last-child:after {
+    content: '';
+}
+
+#mobilenav {
+    display: none;
+    top: 0;
+    width: 100%;
+    background: #AE7947;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+#mobilenav .content {
+    height: auto;
+    line-height: 50px;
+}
+
+#mobilenav .header-title {
+    float: left;
+    display: block;
+    margin-left: 3vw;
+}
+
+#mobilenav .header-title .logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+#mobilenav #mobilenavbutton {
+    float: right;
+    margin-right: 3vw;
+}
+
+#mobilenavigationmenu {
+    display: none;
+    text-align: center;
+    background: #fff;
+    width: 100%;
+}
+
+#mobilenavigationmenu a {
+    color: #252525;
+    text-decoration: none;
+    text-align: left;
+}
+
+#mobilenavigationmenu ul {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#mobilenavigationmenu li {
+    border-bottom: 1px solid #252525;
+}
+
+#pageContent {
+    padding: 50px 0;
+}
+
+#pageContent .contentLoadingImage {
+    position: relative;
+    top: 30vh;
+}
+
+footer {
+    background: #AE7947;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 5vh 0;
+}
+
+footer .contact-details, footer .about {
+    margin: 0 auto;
+    width: 23vw;
+}
+
+footer .infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+footer img {
+    width: 75px;
+    height: 75px;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+}
+
+section {
+    padding: 10vh 5vw;
+    margin-top: 10vh;
+}
+
+#introduction a {
+    text-decoration: none;
+}
+
+#introduction img {
+    width: 150px;
+    height: 150px;
+    margin: 30px 0 0;
+    transition: 1s ease;
+}
+
+#introduction img:hover {
+    width: 300px;
+    height: 300px;
+}
+
+#introduction h1 {
+    color: #AE7947;
+}
+
+#main {
+    background: url(../assets/overlay.png), url(../assets/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+    background-position: 100% 0;
+}
+
+#main, #contact, #devis, #services, #conception, #hebergement, #responsive {
+    text-align: left;
+}
+
+#contact, #devis, #conception, #hebergement, #responsive {
+    margin: auto 5vw;
+}
+
+section .title {
+    margin-left: 5vw;
+}
+
+#main h3 {
+    color: #E7951F;
+    margin-top: 10vh;
+}
+
+#main h3, #main p {
+    margin-left: 10vw;
+}
+
+#main ul {
+    margin: 10vh 0 0 7.5vw;
+}
+
+#main li{
+    margin: 2vh 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#main i {
+    font-size: 1.5em;
+    border-radius: 100%;
+    background: #252525;
+    color: #fff;
+    padding: 15px;
+}
+
+#main i:hover {
+    background: #E7951F;
+}
+
+#contact h1, #devis h1, #conception h1, #hebergement h1, #hebergement h3, #responsive h1, #responsive h3 {
+    border-bottom: 1px solid #E7951F;
+    display: inline-block;
+}
+
+#contact form, #devis form, #conception p, #hebergement p, #responsive p {
+    margin: 2vh 0 2vh 5vw;
+}
+
+#contact form ul, #devis form ul {
+    padding: 0;
+}
+
+#contact form li, #devis form li {
+    margin: 3vh 0;
+}
+
+#contact form label, #devis form label {
+    margin-bottom: 1vh;
+    display: block;
+}
+
+
+#contact form input, #devis form input {
+    width: 200px;
+    height: 20px;
+}
+
+#contact form textarea, #devis form textarea {
+    width: 50vw;
+    height: 15vh;
+}
+
+#devis h3 {
+    color: #E7951F;
+    font-style: italic;
+    border-bottom: 1px dotted #252525;
+    padding: 1vh 0;
+}
+
+#devis .form-part {
+    margin-top: 5vh;
+    width: 80vw;
+}
+
+#services #cards {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 10vh;
+    justify-content: center;
+}
+
+#services #conception-card, #services #hosting-card, #services #responsive-card {
+    margin: 0 3vw;
+    color: #fff;
+    background: #AE7947;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 2vh 3vw;
+    width: 30%;
+}
+
+#services img {
+    width: 150px;
+    height: 150px;
+}
+
+#services #conception-card:hover, #services #hosting-card:hover, #services #responsive-card:hover {
+    background: #E7951F;
+    transition: background 0.5s ease-out;
+}
+
+#services #conception-card {
+    flex-direction: column;
+}
+
+#servicesnav {
+    margin-bottom: 10vh;
+}
+
+#servicesnav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 2vw;
+}
+
+#servicesnav li {
+    margin: 0 auto;
+}
+
+#servicesnav img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 1vw;
+}
+
+#servicesnav a {
+    text-decoration: none;
+    color: #E7951F;
+}
+
+#servicesnav a:hover, #topnav a:hover {
+    font-weight: 600;
+}
+
+#conception #conception-list {
+    padding: 0;
+    margin-left: 5vw;
+}
+
+#conception #conception-list li {
+    margin: 2vh 0;
+}
+
+#conception #conception-list i {
+    color: #E7951F;
+}
+
+#hebergement h3, #responsive h3 {
+    font-weight: 100;
+    margin-left: 5vw;
+}
+
+@media screen and (max-width: 1000px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .contact-details, footer .about {
+        margin: 0 10vw;
+        width: auto;
+    }
+    #main header, #contact header, #devis header {
+        margin-left: unset;
+    }
+    #contact form, #devis form {
+        margin-left: unset;
+    }
+    #main header, #main h3, #main p {
+        margin: 5vh 2vw 0 0;
+    }
+    #main ul {
+        margin-left: 0;
+        padding: 0;
+    }
+    #main li {
+        margin: 10vh 3vw;
+    }
+    #top {
+        display: none;
+    }
+    #mobilenav {
+        display: block;
+        position: fixed;
+    }
+    #devis, #contact, #conception {
+        margin: auto 5vw;
+    }
+    #devis h1, #contact h1 {
+        margin: auto auto;
+    }
+    #devis .form-part {
+        width: unset;
+    }
+    #services #cards {
+        flex-direction: column;
+        margin-left: unset;
+    }
+    #services #conception-card, #services #hosting-card, #services #responsive-card {
+        width: unset;
+        margin-bottom: 10vh;
+    }
+    #servicesnav ul {
+        flex-direction: column;
+    }
+    #servicesnav li {
+        line-height: 50px;
+        margin: 2vh auto;
+    }
+    #conception #conception-list {
+        margin: 10vh 0 10vh 5vw;
+    }
+}
