@@ -17,6 +17,40 @@ body {
     background: transparent;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5f5f5f;
+  border: 4px solid rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #252525;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #e7951f;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+  border: 0px none #000000;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 i {
     margin-right: 10px;
 }
@@ -48,6 +82,7 @@ ul {
     background: #AE7947;
     color: #fff;
     font-size: 0.8em;
+    z-index: 10000;
 }
 
 #top .content {
@@ -103,6 +138,7 @@ ul {
     background: #AE7947;
     color: #fff;
     font-size: 0.8em;
+    z-index: 10000;
 }
 
 #mobilenav .content {
@@ -151,12 +187,17 @@ ul {
 }
 
 #pageContent {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
 }
 
-#pageContent .contentLoadingImage {
+#pageContent .content-loading {
     position: relative;
     top: 30vh;
+}
+
+#pageContent .form-loading {
+    width: 100px;
+    height: 100px;
 }
 
 footer {
@@ -186,11 +227,16 @@ footer h3 {
 footer img {
     width: 75px;
     height: 75px;
+    margin-right: 1vw;
 }
 
 footer ul {
     margin: 0;
     padding: 0;
+}
+
+footer li {
+    margin: 1vh 0;
 }
 
 .content {
@@ -233,11 +279,11 @@ section {
     background-position: 100% 0;
 }
 
-#main, #contact, #devis, #services, #conception, #hebergement, #responsive {
+#main, #contact, #estimation, #services, #conception, #hebergement, #responsive {
     text-align: left;
 }
 
-#contact, #devis, #conception, #hebergement, #responsive {
+#contact, #estimation, #conception, #hebergement, #responsive {
     margin: auto 5vw;
 }
 
@@ -277,47 +323,53 @@ section .title {
     background: #E7951F;
 }
 
-#contact h1, #devis h1, #conception h1, #hebergement h1, #hebergement h3, #responsive h1, #responsive h3 {
+#contact h1, #estimation h1, #conception h1, #hebergement h1, #hebergement h3, #responsive h1, #responsive h3 {
     border-bottom: 1px solid #E7951F;
     display: inline-block;
 }
 
-#contact form, #devis form, #conception p, #hebergement p, #responsive p {
+#contact form, #estimation form, #conception p, #hebergement p, #responsive p {
     margin: 2vh 0 2vh 5vw;
 }
 
-#contact form ul, #devis form ul {
+#contact form ul, #estimation form ul {
     padding: 0;
 }
 
-#contact form li, #devis form li {
+#contact form li, #estimation form li {
     margin: 3vh 0;
 }
 
-#contact form label, #devis form label {
+#contact form label, #estimation form label {
     margin-bottom: 1vh;
     display: block;
 }
 
 
-#contact form input, #devis form input {
+#contact form input, #estimation form input {
     width: 200px;
     height: 20px;
 }
 
-#contact form textarea, #devis form textarea {
+#contact form textarea, #estimation form textarea {
     width: 50vw;
     height: 15vh;
 }
 
-#devis h3 {
+#alert-container {
+    display: none;
+    font-weight: 600;
+    margin: 5vh 0;
+}
+
+#estimation h3 {
     color: #E7951F;
     font-style: italic;
     border-bottom: 1px dotted #252525;
     padding: 1vh 0;
 }
 
-#devis .form-part {
+#estimation .form-part {
     margin-top: 5vh;
     width: 80vw;
 }
@@ -402,7 +454,7 @@ section .title {
     margin-left: 5vw;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     footer {
         display: flex;
         flex-direction: column;
@@ -411,10 +463,10 @@ section .title {
         margin: 0 10vw;
         width: auto;
     }
-    #main header, #contact header, #devis header {
+    #main header, #contact header, #estimation header {
         margin-left: unset;
     }
-    #contact form, #devis form {
+    #contact form, #estimation form {
         margin-left: unset;
     }
     #main header, #main h3, #main p {
@@ -434,13 +486,13 @@ section .title {
         display: block;
         position: fixed;
     }
-    #devis, #contact, #conception {
+    #estimation, #contact, #conception {
         margin: auto 5vw;
     }
-    #devis h1, #contact h1 {
+    #estimation h1, #contact h1 {
         margin: auto auto;
     }
-    #devis .form-part {
+    #estimation .form-part {
         width: unset;
     }
     #services #cards {

@@ -1,4 +1,4 @@
-<section id="devis">
+<section id="estimation">
     <header class="title">
         <h1>Demande de devis</h1>
     </header>
@@ -9,6 +9,7 @@
         <p>
             Certaines questions vous posent problème ? Pas de souci ! Je suis là pour vous épauler, nous y reviendrons ensemble plus tard.
         </p>
+        <p>Les champs marqués d'un astérisque (*) sont optionnels.</p>
         <div class="form-part">
             <h3>Parlez-moi de vous</h3>
             <ul>
@@ -31,9 +32,9 @@
                     </div>
                 </li>
                 <li>
-                    <label for="usertelnumber">Votre numéro de téléphone</label>
+                    <label for="usertelnumber">Votre numéro de téléphone*</label>
                     <div class="input-container">
-                        <input type="text" name="usertelnumber" id="usertelnumber" required>
+                        <input type="tel" name="usertelnumber" id="usertelnumber" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required>
                     </div>
                 </li>
             </ul>
@@ -71,15 +72,15 @@
                     </div>
                 </li>
                 <li>
-                    <label for="usersocietytargerts">A qui doit s'adresser votre futur site ?</label>
+                    <label for="usersocietytargets">A qui doit s'adresser votre futur site ?</label>
                     <div class="input-container">
-                        <textarea name="usersocietytargerts" id="usersocietytargerts" required></textarea>
+                        <textarea name="usersocietytargets" id="usersocietytargets" required></textarea>
                     </div>
                 </li>
                 <li>
                     <label for="userbudget">Votre budget tout compris pour la réalisation du site (comprenant l'hébergement et l'achat éventuel d'illustrations)</label>
                     <div class="input-container">
-                        <input type="text" name="userbudget" id="usersocietytargerts" required></textarea>
+                        <input type="number" name="userbudget" id="userbudget"> €
                     </div>
                 </li>
             </ul>
@@ -88,15 +89,15 @@
             <h3>Quid de vos concurrents ?</h3>
             <ul>
                 <li>
-                    <label for="userpleasingcompetitor">Sites concurrents qui vous plaisent, et pourquoi</label>
+                    <label for="userpleasingcompetitor">Sites concurrents qui vous plaisent, et pourquoi*</label>
                     <div class="input-container">
-                        <textarea name="userpleasingcompetitor" id="userpleasingcompetitor" required></textarea>
+                        <textarea name="userpleasingcompetitor" id="userpleasingcompetitor"></textarea>
                     </div>
                 </li>
                 <li>
-                    <label for="userunpleasantcompetitor">Sites concurrents qui vous déplaisent, et pourquoi</label>
+                    <label for="userunpleasantcompetitor">Sites concurrents qui vous déplaisent, et pourquoi*</label>
                     <div class="input-container">
-                        <textarea name="userunpleasantcompetitor" id="userunpleasantcompetitor" required></textarea>
+                        <textarea name="userunpleasantcompetitor" id="userunpleasantcompetitor"></textarea>
                     </div>
                 </li>
             </ul>
@@ -105,13 +106,19 @@
             <h3>Souhaitez-vous ajouter quelque chose ?</h3>
             <ul>
                 <li>
-                    <label for="userprompt">Précisions éventuelles ou questions</label>
+                    <label for="userclarifications">Précisions éventuelles ou questions*</label>
                     <div class="input-container">
-                        <textarea name="userprompt" id="userprompt" required></textarea>
+                        <textarea name="userclarifications" id="userclarifications"></textarea>
                     </div>
                 </li>
             </ul>
         </div>
-        <button type="button">Envoyer</button>
+        <div id='alert-container'>
+
+        </div>
+        <div id="form-validation-container">
+            <button id="button-send" type="button" onclick="sendEstimation()">Envoyer ma demande de devis</button>
+        </div>
     </form>
 </section>
+<?php include('config/footer.php'); ?>

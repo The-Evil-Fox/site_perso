@@ -17,7 +17,6 @@
     <div id="pageContent">
         <?php include('home.php'); ?>
     </div>
-    <?php include('config/footer.php'); ?>
     <script src="scripts/interface.js"></script>
 </body>
 </html>

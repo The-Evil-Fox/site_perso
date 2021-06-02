@@ -12,6 +12,9 @@
                 <li>
                     <a href="javascript:void(0)"onclick="generateContent('contact')"><i class="far fa-envelope"></i>Contact</a>
                 </li>
+                <li>
+                    <a href="javascript:void(0)"onclick="generateContent('estimation')"><i class="far fa-envelope"></i>devis</a>
+                </li>
             </ul>
         </nav>
     </div>

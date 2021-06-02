@@ -22,10 +22,16 @@
             <li>
                 <label for="usermessage">Votre message</label>
                 <div class="input-container">
-                    <textarea name="usermessage" id="usermessage" required></textarea>
+                    <textarea name="usermessage" id="usermessage" placeholder="Veuillez insérer votre message... (1500 caractères maximum)" required></textarea>
                 </div>
             </li>
         </ul>
-        <button type="button">Envoyer</button>
+        <div id='alert-container'>
+
+        </div>
+        <div id="form-validation-container">
+            <button id="button-send" type="button" onclick="sendContact()">Envoyer mon message</button>
+        </div>
     </form>
 </section>
+<?php include('config/footer.php'); ?>

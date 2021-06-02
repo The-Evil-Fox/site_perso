@@ -22,6 +22,7 @@
         </li>
     </ul>
     <p>
-    Pour autant, si vous créez un nouveau site, vous pouvez avoir besoin d'aide pour rédiger ce cahier des charges ou pour concevoir plus précisément votre projet. Contactez-moi pour des conseils et approfondir ces éléments.
+        Pour autant, si vous créez un nouveau site, vous pouvez avoir besoin d'aide pour rédiger ce cahier des charges ou pour concevoir plus précisément votre projet. Contactez-moi pour des conseils et approfondir ces éléments.
     </p>
 </section>
+<?php include('config/footer.php'); ?>

@@ -4,7 +4,8 @@
         <div class="infos">
             <img src="assets/TheEvilFoxLogo.png" alt="Développeur web/web mobile fullstack Valenciennes nord 59 steven durieux">
             <ul>
-                <li>71 rue Bernard Campana 59199 Hergnies</li>
+                <li>71 rue Bernard Campana</li>
+                <li>59199 Hergnies</li>
                 <li>07 77 69 66 81</li>
                 <li>stevenhonor@live.fr</li>
             </ul>
@@ -14,9 +15,9 @@
         <h3>A propos</h3>
         <ul>
             <li>
-                Conception de sites internet professionnels
+                Conception de sites internet professionnels.
             </li>
-            <li>Développeur web fullstack détenteur du titre professionnel de développeur web/web mobile</li>
+            <li>Développeur web fullstack détenteur du titre professionnel de développeur web/web mobile.</li>
         </ul>
     </div>
 </footer>

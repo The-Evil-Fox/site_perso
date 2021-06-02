@@ -6,7 +6,7 @@
     </div>
     <h1>Steven Durieux</h1>
     <p>Conception et déploiement de sites internet sur mesure, accessibles & modernes</p>
-    <button type="button" id="devisButton" onclick="generateContent('devis')">Demander un devis</button>
+    <button type="button" id="estimationLinkButton" onclick="generateContent('estimation')">Demander un devis</button>
 </section>
 <section id="main">
     <div class="content">
@@ -50,3 +50,4 @@
         </div>
     </div>
 </section>
+<?php include('config/footer.php'); ?>
