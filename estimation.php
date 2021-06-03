@@ -49,15 +49,15 @@
                     </div>
                 </li>
                 <li>
-                    <label for="usersocietywebsite">Site web (si déjà existant)</label>
+                    <label for="usersocietywebsite">Lien vers votre site web (si déjà existant)</label>
                     <div class="input-container">
-                        <input type="text" name="usersocietywebsite" id="usersocietywebsite" required>
+                        <input type="url" name="usersocietywebsite" id="usersocietywebsite" required>
                     </div>
                 </li>
                 <li>
                     <label for="usersocietydescription">Description de l'entreprise</label>
                     <div class="input-container">
-                        <textarea name="usersocietydescription" id="usersocietydescription" required></textarea>
+                        <textarea name="usersocietydescription" id="usersocietydescription" placeholder="Veuillez insérer la description de votre entreprise... (1500 caractères maximum)" required></textarea>
                     </div>
                 </li>
             </ul>
@@ -68,13 +68,13 @@
                 <li>
                     <label for="usersocietyobjectives">Objectif(s) de votre site</label>
                     <div class="input-container">
-                        <textarea name="usersocietyobjectives" id="usersocietyobjectives" required></textarea>
+                        <textarea name="usersocietyobjectives" id="usersocietyobjectives" placeholder="Veuillez insérer la description des objectifs de votre entreprise... (1500 caractères maximum)" required></textarea>
                     </div>
                 </li>
                 <li>
                     <label for="usersocietytargets">A qui doit s'adresser votre futur site ?</label>
                     <div class="input-container">
-                        <textarea name="usersocietytargets" id="usersocietytargets" required></textarea>
+                        <textarea name="usersocietytargets" id="usersocietytargets" placeholder="Veuillez insérer la description du public visé par votre site web... (1500 caractères maximum)" required></textarea>
                     </div>
                 </li>
                 <li>
@@ -91,13 +91,13 @@
                 <li>
                     <label for="userpleasingcompetitor">Sites concurrents qui vous plaisent, et pourquoi*</label>
                     <div class="input-container">
-                        <textarea name="userpleasingcompetitor" id="userpleasingcompetitor"></textarea>
+                        <textarea name="userpleasingcompetitor" id="userpleasingcompetitor" placeholder="Insérer ici la description des sites concurrents qui vous plaisent... (1500 caractères maximum)"></textarea>
                     </div>
                 </li>
                 <li>
                     <label for="userunpleasantcompetitor">Sites concurrents qui vous déplaisent, et pourquoi*</label>
                     <div class="input-container">
-                        <textarea name="userunpleasantcompetitor" id="userunpleasantcompetitor"></textarea>
+                        <textarea name="userunpleasantcompetitor" id="userunpleasantcompetitor" placeholder="Insérer ici la description des sites concurrents qui vous déplaisent... (1500 caractères maximum)"></textarea>
                     </div>
                 </li>
             </ul>
@@ -108,7 +108,7 @@
                 <li>
                     <label for="userclarifications">Précisions éventuelles ou questions*</label>
                     <div class="input-container">
-                        <textarea name="userclarifications" id="userclarifications"></textarea>
+                        <textarea name="userclarifications" id="userclarifications" placeholder="Insérer ici vos précisions ou vos questions éventuelles... (1500 caractères maximum)"></textarea>
                     </div>
                 </li>
             </ul>

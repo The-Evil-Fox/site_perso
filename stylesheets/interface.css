@@ -163,6 +163,11 @@ ul {
     margin-right: 3vw;
 }
 
+#mobilenav #mobilenavbutton:hover {
+    color: #252525;
+    transition: 1s ease;
+}
+
 #mobilenavigationmenu {
     display: none;
     text-align: center;
@@ -209,15 +214,18 @@ footer {
     padding: 5vh 0;
 }
 
+footer .contact-details {
+    margin-left: 5vw;
+}
+
 footer .contact-details, footer .about {
+    width: 30%;
     margin: 0 auto;
-    width: 23vw;
 }
 
 footer .infos {
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 footer h3 {
@@ -287,7 +295,7 @@ section {
     margin: auto 5vw;
 }
 
-section .title {
+#main .title {
     margin-left: 5vw;
 }
 
@@ -297,15 +305,15 @@ section .title {
 }
 
 #main h3, #main p {
-    margin-left: 10vw;
+    margin-left: 5vw;
 }
 
 #main ul {
-    margin: 10vh 0 0 7.5vw;
+    margin: 10vh 0 0 2.5vw;
 }
 
 #main li{
-    margin: 2vh 2vw;
+    margin: 5vh 2vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -317,10 +325,12 @@ section .title {
     background: #252525;
     color: #fff;
     padding: 15px;
+    transition: 1s ease;
 }
 
 #main i:hover {
     background: #E7951F;
+    color: #252525;
 }
 
 #contact h1, #estimation h1, #conception h1, #hebergement h1, #hebergement h3, #responsive h1, #responsive h3 {
@@ -329,7 +339,7 @@ section .title {
 }
 
 #contact form, #estimation form, #conception p, #hebergement p, #responsive p {
-    margin: 2vh 0 2vh 5vw;
+    margin: 2vh 0 2vh 0;
 }
 
 #contact form ul, #estimation form ul {
@@ -372,6 +382,10 @@ section .title {
 #estimation .form-part {
     margin-top: 5vh;
     width: 80vw;
+}
+
+#services {
+    margin-left: 5vw;
 }
 
 #services #cards {
@@ -438,7 +452,6 @@ section .title {
 
 #conception #conception-list {
     padding: 0;
-    margin-left: 5vw;
 }
 
 #conception #conception-list li {
@@ -469,9 +482,6 @@ section .title {
     #contact form, #estimation form {
         margin-left: unset;
     }
-    #main header, #main h3, #main p {
-        margin: 5vh 2vw 0 0;
-    }
     #main ul {
         margin-left: 0;
         padding: 0;
@@ -495,6 +505,13 @@ section .title {
     #estimation .form-part {
         width: unset;
     }
+    #services {
+        margin: 0 5vw;
+        padding: 10vh 5vw;
+    }
+    #services {
+        text-align: center;
+    }
     #services #cards {
         flex-direction: column;
         margin-left: unset;
@@ -502,15 +519,18 @@ section .title {
     #services #conception-card, #services #hosting-card, #services #responsive-card {
         width: unset;
         margin-bottom: 10vh;
+        margin-left: unset;
+        margin-right: unset;
     }
     #servicesnav ul {
         flex-direction: column;
     }
     #servicesnav li {
         line-height: 50px;
-        margin: 2vh auto;
+        margin: 2vh 0;
+        padding: 0;
     }
     #conception #conception-list {
-        margin: 10vh 0 10vh 5vw;
+        margin: 10vh 0 10vh 0;
     }
 }

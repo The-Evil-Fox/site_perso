@@ -35,7 +35,30 @@ myFunctions = {
 
         }, 3000);
         
+    },
+
+    validateEmail(email) {
+
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+
+    },
+
+    validateURL(string) {
+
+        var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+        return (res !== null)
+
     }
+
+}
+
+// Defines the color used by Javascript to display messages to the user.
+
+myColors = {
+
+    alert: "#CF0404",
+    confirmation: "#30CF04"
 
 }
 
@@ -93,12 +116,12 @@ function generateContent(userSelection) {
             dataType: "HTML",
             success: function(data) {
 
-                // setTimeout(() => {
+                setTimeout(() => {
 
                     $('#pageContent').html(data);
                     categorie = userSelection;
                     
-                // }, 1000);
+                }, 1000);
 
             },
             error: function(xhr, textStatus, error) {
@@ -126,193 +149,6 @@ function showMobileNavMenu() {
     } else {
 
         mobileNavMenu.display = "flex";
-
-    }
-
-}
-
-/*
-    Contact form send function. First verify user inputs before sending them to the server 
-    and display the message returned by the server
-*/
-
-function sendContact() {
-
-    let username = document.getElementById('username').value;
-    let usermail = document.getElementById('usermail').value;
-    let usermessage = document.getElementById('usermessage').value;
-
-    if(username.length < 5) {
-
-        errorMessage = 'Veuillez insérer votre nom !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(username.length > 50) {
-
-        errorMessage = 'Votre nom ne doit pas dépasser 50 caractères maximum !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(usermail.length < 5) {
-
-        errorMessage = 'Veuillez insérer votre adresse e-mail !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(usermail.length > 50) {
-
-        errorMessage = 'Votre adresse e-mail ne doit pas dépasser 50 caractères maximum !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(usermessage.length < 15) {
-
-        errorMessage = 'Veuillez insérer votre message !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(usermessage.length > 1500) {
-
-        errorMessage = 'Votre message est trop long ! (1500 caractères maximum !)';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    dataSend = {
-        username,
-        usermail,
-        usermessage
-    }
-
-    let formValidationContainer = document.getElementById('form-validation-container');
-    let buttonSend = formValidationContainer.innerHTML;
-    myFunctions.showLoading('form-validation-container', 'form-loading');
-
-    $.ajax({
-
-        url: "processing/processing-contact.php",
-        type: "POST",
-        data: dataSend,
-        dataType: "TEXT",
-        success: function(data) {
-
-            setTimeout(() => {
-
-                if(data.includes("Erreur :")) {
-                    let errorMessage = data.replace('Erreur :','');
-                    myFunctions.showFormMessage(errorMessage, "#E7951F");
-                    formValidationContainer.innerHTML = buttonSend;
-                    return;
-    
-                } else {
-                    
-                    formValidationContainer.innerHTML = data;
-                    formValidationContainer.style.color = "#30CF04";
-    
-                }
-                
-            }, 1000);
-
-        },
-        error: function(xhr, textStatus, error) {
-
-            alert(error);
-
-        }
-
-    });
-    
-}
-
-/*
-    Estimation form send function. First verify user inputs before sending them to the server 
-    and display the message returned by the server
-*/
-
-function sendEstimation() {
-
-    let username = document.getElementById('username').value;
-    let userrole = document.getElementById('userrole').value;
-    let usermail = document.getElementById('usermail').value;
-    let usertelnumber = document.getElementById('usertelnumber').value;
-    let usersocietyname = document.getElementById('usersocietyname').value;
-    let usersocietywebsite = document.getElementById('usersocietywebsite').value;
-    let usersocietydescription = document.getElementById('usersocietydescription').value;
-    let usersocietyobjectives = document.getElementById('usersocietyobjectives').value;
-    let usersocietytargets = document.getElementById('usersocietytargets').value;
-    let userbudget = document.getElementById('userbudget').value;
-    let userpleasingcompetitor = document.getElementById('userpleasingcompetitor').value;
-    let userunpleasantcompetitor = document.getElementById('userunpleasantcompetitor').value;
-    let userclarifications = document.getElementById('userclarifications').value;
-
-    var phoneno = /^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$/;
-
-
-    if(username.length < 5) {
-
-        errorMessage = 'Veuillez insérer votre nom !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(username.length > 50) {
-
-        errorMessage = 'Votre nom ne doit pas dépasser 50 caractères maximum !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(userrole.length < 5) {
-
-        errorMessage = 'Veuillez insérer votre fonction !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(userrole.length > 50) {
-
-        errorMessage = 'Votre fonction ne doit pas dépasser 50 caractères maximum !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(usermail.length < 5) {
-
-        errorMessage = 'Veuillez insérer votre adresse e-mail !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(usermail.length > 50) {
-
-        errorMessage = 'Votre adresse e-mail ne doit pas dépasser 50 caractères maximum !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
-
-    }
-
-    if(usertelnumber.length !== 0 && !usertelnumber.match(phoneno)) {
-
-        errorMessage = 'Veuillez insérer un numéro de téléphone valide !';
-        myFunctions.showFormMessage(errorMessage, "#E7951F");
-        return;
 
     }
 

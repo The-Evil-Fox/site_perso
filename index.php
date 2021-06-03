@@ -18,5 +18,6 @@
         <?php include('home.php'); ?>
     </div>
     <script src="scripts/interface.js"></script>
+    <script src="scripts/forms.js"></script>
 </body>
 </html>
