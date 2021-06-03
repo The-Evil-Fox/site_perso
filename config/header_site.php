@@ -1,4 +1,4 @@
-<header id="top">
+<header id="navbar">
     <div class="content">
         <a class="header-title" href=""><img class="logo" src="assets/TheEvilFoxLogo.png" alt="développeur web valenciennes Steven Durieux">Steven Durieux - Développeur web</a>
         <nav id="topnav">
@@ -12,13 +12,11 @@
                 <li>
                     <a href="javascript:void(0)"onclick="generateContent('contact')"><i class="far fa-envelope"></i>Contact</a>
                 </li>
-                <li>
-                    <a href="javascript:void(0)"onclick="generateContent('estimation')"><i class="far fa-envelope"></i>devis</a>
-                </li>
             </ul>
         </nav>
     </div>
 </header>
+<!-- End navbar -->
 <header id="mobilenav">
     <div class="content">
         <a class="header-title" href=""><img class="logo" src="assets/TheEvilFoxLogo.png" alt="développeur web valenciennes Steven Durieux"></a>
@@ -35,3 +33,4 @@
         </nav>
     </div>
 </header>
+<!-- End responsive navbar -->

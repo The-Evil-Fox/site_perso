@@ -17,7 +17,9 @@
     <div id="pageContent">
         <?php include('home.php'); ?>
     </div>
+    <?php include('config/scrolltop.php'); ?>
     <script src="scripts/interface.js"></script>
     <script src="scripts/forms.js"></script>
+    <noscript>Votre navigateur ne prend pas en charge les fonctionnalités Javascript !</noscript>
 </body>
 </html>

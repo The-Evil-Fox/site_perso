@@ -2,7 +2,7 @@
 
 categorie = "home";
 
-// Already Target the responsive navigation menu for functions that modify it.
+// Targets the responsive navigation menu for functions that modify it.
 
 mobileNavMenu = document.getElementById('mobilenavigationmenu').style;
 
@@ -142,14 +142,40 @@ function generateContent(userSelection) {
 
 function showMobileNavMenu() {
 
+    mobileNavButton = document.getElementById('mobilenavbutton');
+
     if(mobileNavMenu.display == "flex") {
 
         mobileNavMenu.display = "none";
+        mobileNavButton.style.color = "#fff";
 
     } else {
 
         mobileNavMenu.display = "flex";
+        mobileNavButton.style.color = "#E7951F";
+        // document.addEventListener('click', clicknav);
 
     }
 
 }
+
+// Show the scroll top button when the user scroll the page down
+
+window.onscroll = function() {
+
+    scrollTopButton = document.getElementById('scrollup');
+
+    if (window.scrollY > 150) {
+
+        console.log('fenetre scrollée...');
+
+        scrollTopButton.style.display = "block";
+
+    } else {
+
+        console.log('fenetre non scrollée....');
+    
+        scrollTopButton.style.display = "none";
+
+    }
+};

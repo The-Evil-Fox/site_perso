@@ -75,59 +75,59 @@ ul {
     list-style: none;
 }
 
-#top {
+#navbar {
     position: absolute;
     top: 0;
     width: 100%;
-    background: #AE7947;
+    background: #252525;
     color: #fff;
     font-size: 0.8em;
     z-index: 10000;
 }
 
-#top .content {
+#navbar .content {
     height: 50px;
     line-height: 50px;
 }
 
-#top a {
+#navbar a {
     color: #fff;
     text-decoration: none;
     margin: 0 1vw;
 }
 
-#top .header-title {
+#navbar .header-title {
     float: left;
     display: block;
     margin-left: 10vw;
 }
 
-#top .header-title .logo {
+#navbar .header-title .logo {
     width: 50px;
     height: 50px;
     vertical-align: bottom;
 }
 
-#top nav {
+#navbar nav {
     float: right;
     margin-right: 10vw;
 }
 
-#top nav ul {
+#navbar nav ul {
     margin: 0;
     padding: 0;
 }
 
-#top nav li {
+#navbar nav li {
     display: inline-block;
 }
 
-#top nav li:after {
+#navbar nav li:after {
     content: ' | ';
     color: #fff;
 }
 
-#top nav li:last-child:after {
+#navbar nav li:last-child:after {
     content: '';
 }
 
@@ -135,7 +135,7 @@ ul {
     display: none;
     top: 0;
     width: 100%;
-    background: #AE7947;
+    background: #252525;
     color: #fff;
     font-size: 0.8em;
     z-index: 10000;
@@ -161,10 +161,6 @@ ul {
 #mobilenav #mobilenavbutton {
     float: right;
     margin-right: 3vw;
-}
-
-#mobilenav #mobilenavbutton:hover {
-    color: #252525;
     transition: 1s ease;
 }
 
@@ -245,6 +241,40 @@ footer ul {
 
 footer li {
     margin: 1vh 0;
+}
+
+#copyright-container {
+    color: #fff;
+    background: #252525;
+    padding: 1vh 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#copyright-container .copyright, #copyright-container .links {
+    width: 30%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#copyright-container .links i {
+    color: #fff;
+    margin: 0 1vw 0 0;
+    font-size: 1.5em;
+}
+
+#scrollup {
+    display: none;
+    position: fixed;
+    right: 1vw;
+    bottom: 5vh;
+    z-index: 10000;
+}
+
+#scrollup img {
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
 }
 
 .content {
@@ -469,12 +499,22 @@ section {
 
 @media screen and (max-width: 1024px) {
     footer {
-        display: flex;
         flex-direction: column;
     }
     footer .contact-details, footer .about {
         margin: 0 10vw;
         width: auto;
+    }
+    #copyright-container {
+        flex-direction: column;
+    }
+    #copyright-container .copyright, #copyright-container .links {
+        width: 100%;
+        margin: 2vh 0;
+        text-align: center;
+    }
+    #copyright-container .links i {
+        margin: 0 3vw;
     }
     #main header, #contact header, #estimation header {
         margin-left: unset;

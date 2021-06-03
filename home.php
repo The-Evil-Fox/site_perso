@@ -51,3 +51,4 @@
     </div>
 </section>
 <?php include('config/footer.php'); ?>
+<?php include('config/copyright.php'); ?>

@@ -21,3 +21,4 @@
         </ul>
     </div>
 </footer>
+<!-- End footer -->
