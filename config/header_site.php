@@ -1,4 +1,4 @@
-<header id="navbar">
+<header id="navbar" aria-label="Menu de navigation principal">
     <div class="content">
         <a class="header-title" href=""><img class="logo" src="assets/TheEvilFoxLogo.png" alt="développeur web valenciennes Steven Durieux">Steven Durieux - Développeur web</a>
         <nav id="topnav">
@@ -17,7 +17,7 @@
     </div>
 </header>
 <!-- End navbar -->
-<header id="mobilenav">
+<header id="mobilenav" aria-label="Menu de navigation principal">
     <div class="content">
         <a class="header-title" href=""><img class="logo" src="assets/TheEvilFoxLogo.png" alt="développeur web valenciennes Steven Durieux"></a>
         <span id="mobilenavbutton" onclick="showMobileNavMenu()"><i class="fas fa-bars"></i></span>

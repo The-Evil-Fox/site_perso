@@ -33,20 +33,35 @@
         <h1>Services</h1>
     </header>
     <div id="cards">
-        <div id="conception-card" onclick="generateContent('conception')">
-            <img src="assets/conception.png" alt="conception image developpement web steven durieux développeur web valenciennes 59 nord">
-            <h3>Conception</h3>
-            <p>Positionnement, fonctionnalités, stratégie: un projet web complet.</p>
+        <div id="conception-card">
+            <div class="card-content">
+                <img src="assets/conception.png" alt="conception image developpement web steven durieux développeur web valenciennes 59 nord">
+                <h3>Conception</h3>
+                <p>Positionnement, fonctionnalités, stratégie: un projet web complet.</p>
+            </div>
+            <div id="conception-link" class="link-container" onclick="generateContent('conception')">
+                <a href="javascript:void(0)">En savoir plus</a>
+            </div>
         </div>
-        <div id="hosting-card" onclick="generateContent('hebergement')">
-            <img src="assets/serveurs.png" alt="serveurs image developpement web steven durieux développeur web valenciennes 59 nord">
-            <h3>Hébergement</h3>
-            <p>Adaptez votre hébergement aux besoins réels de votre site.</p>
+        <div id="hosting-card">
+            <div class="card-content">
+                <img src="assets/serveurs.png" alt="serveurs image developpement web steven durieux développeur web valenciennes 59 nord">
+                <h3>Hébergement</h3>
+                <p>Adaptez votre hébergement aux besoins réels de votre site.</p>
+            </div>
+            <div id="hosting-link" class="link-container" onclick="generateContent('hebergement')">
+                <a href="javascript:void(0)">En savoir plus</a>
+            </div>
         </div>
-        <div id="responsive-card" onclick="generateContent('responsive')">
-            <img src="assets/phone.png" alt="phone image developpement web steven durieux développeur web valenciennes 59 nord">
-            <h3>Design web responsive</h3>
-            <p>Adaptation multi-supports de votre site internet.</p>
+        <div id="responsive-card">
+            <div class="card-content">
+                <img src="assets/phone.png" alt="phone image developpement web steven durieux développeur web valenciennes 59 nord">
+                <h3>Design web responsive</h3>
+                <p>Adaptation multi-supports de votre site internet.</p>
+            </div>
+            <div id="responsive-link" class="link-container" onclick="generateContent('responsive')">
+                <a href="javascript:void(0)">En savoir plus</a>
+            </div>
         </div>
     </div>
 </section>

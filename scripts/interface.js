@@ -99,11 +99,7 @@ function dyslexie() {
 
 function generateContent(userSelection) {
 
-    if(mobileNavMenu.display == "flex") {
-
-        mobileNavMenu.display = "none";
-
-    }
+    showMobileNavMenu();
 
     if(userSelection !== categorie) {
 
@@ -167,13 +163,9 @@ window.onscroll = function() {
 
     if (window.scrollY > 150) {
 
-        console.log('fenetre scrollée...');
-
         scrollTopButton.style.display = "block";
 
     } else {
-
-        console.log('fenetre non scrollée....');
     
         scrollTopButton.style.display = "none";
 

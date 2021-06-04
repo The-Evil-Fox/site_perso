@@ -386,20 +386,37 @@ section {
 }
 
 
-#contact form input, #estimation form input {
-    width: 200px;
+form input, form input {
+    width: 400px;
     height: 20px;
 }
 
-#contact form textarea, #estimation form textarea {
+form input[type=number] {
+    width: 100px;
+}
+
+form textarea, form textarea {
     width: 50vw;
     height: 15vh;
 }
 
-#alert-container {
+/* #alert-container {
     display: none;
     font-weight: 600;
     margin: 5vh 0;
+} */
+
+#alert-container {
+    display: none;
+    font-weight: 600;
+    position: fixed;
+    background: #252525;
+    color: #fff;
+    padding: 5vh 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
 }
 
 #estimation h3 {
@@ -415,6 +432,15 @@ section {
 }
 
 #services {
+    background: url(../assets/overlay.png), url(../assets/services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 0;
+    color: #fff;
+}
+
+#services header {
     margin-left: 5vw;
 }
 
@@ -422,27 +448,56 @@ section {
     display: flex;
     flex-direction: row;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
     justify-content: center;
+    margin-left: 5vw;
 }
 
 #services #conception-card, #services #hosting-card, #services #responsive-card {
     margin: 0 3vw;
     color: #fff;
-    background: #AE7947;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 2vh 3vw;
     width: 30%;
+}
+
+#services .card-content {
+    padding: 2vh 3vw;
+    background: #AE7947;
+    min-height: 385px;
+    max-height: 385px;
+}
+
+#services .link-container {
+    padding: 1vh 0 1vh 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: #252525;
+    cursor: pointer;
+}
+
+#services .link-container a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 #services img {
     width: 150px;
     height: 150px;
+    margin-top: 5vh;
 }
 
-#services #conception-card:hover, #services #hosting-card:hover, #services #responsive-card:hover {
+#services #conception-card:hover .card-content, #services #hosting-card:hover .card-content, #services #responsive-card:hover .card-content {
     background: #E7951F;
+    transition: background 0.5s ease-out;
+}
+
+#services #conception-card:hover #conception-link, #services #hosting-card:hover #hosting-link, #services #responsive-card:hover #responsive-link  {
+    background: #fff;
+    transition: background 0.5s ease-out;
+}
+
+#services #conception-card:hover #conception-link a, #services #hosting-card:hover #hosting-link a, #services #responsive-card:hover #responsive-link a {
+    color: #252525;
     transition: background 0.5s ease-out;
 }
 
@@ -494,7 +549,6 @@ section {
 
 #hebergement h3, #responsive h3 {
     font-weight: 100;
-    margin-left: 5vw;
 }
 
 @media screen and (max-width: 1024px) {
@@ -527,7 +581,7 @@ section {
         padding: 0;
     }
     #main li {
-        margin: 10vh 3vw;
+        margin: 10vh 5vw;
     }
     #top {
         display: none;
@@ -535,6 +589,9 @@ section {
     #mobilenav {
         display: block;
         position: fixed;
+    }
+    form input, form textarea {
+        width: 78vw;
     }
     #estimation, #contact, #conception {
         margin: auto 5vw;
@@ -546,21 +603,25 @@ section {
         width: unset;
     }
     #services {
-        margin: 0 5vw;
         padding: 10vh 5vw;
-    }
-    #services {
         text-align: center;
+    }
+    #services header {
+        text-align: left;
     }
     #services #cards {
         flex-direction: column;
         margin-left: unset;
     }
     #services #conception-card, #services #hosting-card, #services #responsive-card {
-        width: unset;
+        width: 80vw;
         margin-bottom: 10vh;
-        margin-left: unset;
-        margin-right: unset;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #services .card-content {
+        min-height: unset;
+        max-height: unset;
     }
     #servicesnav ul {
         flex-direction: column;
