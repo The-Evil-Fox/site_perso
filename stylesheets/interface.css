@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+html {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height: 100%;
+    font-size: 1.3em;
+    color: #252525;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    word-break: break-word;
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5f5f5f;
+  border: 4px solid rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #252525;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #e7951f;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+  border: 0px none #000000;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+i {
+    margin-right: 10px;
+}
+
+button {
+    color: #fff;
+    background: #AE7947;
+    border: none;
+    padding: 1.5vh 3vw;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #E7951F;
+    transition: background 0.5s ease-out;
+}
+
+ul {
+    list-style: none;
+}
+
+#navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #252525;
+    color: #fff;
+    font-size: 0.8em;
+    z-index: 10000;
+}
+
+#navbar .content {
+    height: 50px;
+    line-height: 50px;
+}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1vw;
+}
+
+#navbar .header-title {
+    float: left;
+    display: block;
+    margin-left: 10vw;
+}
+
+#navbar .header-title .logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+#navbar nav {
+    float: right;
+    margin-right: 10vw;
+}
+
+#navbar nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar nav li {
+    display: inline-block;
+}
+
+#navbar nav li:after {
+    content: ' | ';
+    color: #fff;
+}
+
+#navbar nav li:last-child:after {
+    content: '';
+}
+
+#mobilenav {
+    display: none;
+    top: 0;
+    width: 100%;
+    background: #252525;
+    color: #fff;
+    font-size: 0.8em;
+    z-index: 10000;
+}
+
+#mobilenav .content {
+    height: auto;
+    line-height: 50px;
+}
+
+#mobilenav .header-title {
+    float: left;
+    display: block;
+    margin-left: 3vw;
+}
+
+#mobilenav .header-title .logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+#mobilenav #mobilenavbutton {
+    float: right;
+    margin-right: 3vw;
+    transition: 1s ease;
+}
+
+#mobilenavigationmenu {
+    display: none;
+    text-align: center;
+    background: #fff;
+    width: 100%;
+}
+
+#mobilenavigationmenu a {
+    color: #252525;
+    text-decoration: none;
+    text-align: left;
+}
+
+#mobilenavigationmenu ul {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#mobilenavigationmenu li {
+    border-bottom: 1px solid #252525;
+}
+
+#pageContent {
+    padding: 50px 0 0 0;
+}
+
+#pageContent .content-loading {
+    position: relative;
+    top: 30vh;
+}
+
+#pageContent .form-loading {
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    background: #AE7947;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 5vh 0;
+}
+
+footer .contact-details {
+    margin-left: 5vw;
+}
+
+footer .contact-details, footer .about {
+    width: 30%;
+    margin: 0 auto;
+}
+
+footer .infos {
+    display: flex;
+    flex-direction: row;
+}
+
+footer h3 {
+    color: #fff;
+}
+
+footer img {
+    width: 75px;
+    height: 75px;
+    margin-right: 1vw;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    margin: 1vh 0;
+}
+
+#copyright-container {
+    color: #fff;
+    background: #252525;
+    padding: 1vh 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#copyright-container .copyright, #copyright-container .links {
+    width: 30%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#copyright-container .links i {
+    color: #fff;
+    margin: 0 1vw 0 0;
+    font-size: 1.5em;
+}
+
+#scrollup {
+    display: none;
+    position: fixed;
+    right: 1vw;
+    bottom: 5vh;
+    z-index: 10000;
+}
+
+#scrollup img {
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
+}
+
+.content {
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+}
+
+section {
+    padding: 10vh 5vw;
+    margin-top: 10vh;
+}
+
+#introduction a {
+    text-decoration: none;
+}
+
+#introduction img {
+    width: 150px;
+    height: 150px;
+    margin: 30px 0 0;
+    transition: 1s ease;
+}
+
+#introduction img:hover {
+    width: 300px;
+    height: 300px;
+}
+
+#introduction h1 {
+    color: #AE7947;
+}
+
+#main {
+    background: url(../assets/overlay.png), url(../assets/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+    background-position: 100% 0;
+}
+
+#main, #contact, #estimation, #services, #conception, #hebergement, #responsive {
+    text-align: left;
+}
+
+#contact, #estimation, #conception, #hebergement, #responsive {
+    margin: auto 5vw;
+}
+
+#main .title {
+    margin-left: 5vw;
+}
+
+#main h3 {
+    color: #E7951F;
+    margin-top: 10vh;
+}
+
+#main h3, #main p {
+    margin-left: 5vw;
+}
+
+#main ul {
+    margin: 10vh 0 0 2.5vw;
+}
+
+#main li{
+    margin: 5vh 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#main i {
+    font-size: 1.5em;
+    border-radius: 100%;
+    background: #252525;
+    color: #fff;
+    padding: 15px;
+    transition: 1s ease;
+}
+
+#main i:hover {
+    background: #E7951F;
+    color: #252525;
+}
+
+#contact h1, #estimation h1, #conception h1, #hebergement h1, #hebergement h3, #responsive h1, #responsive h3 {
+    border-bottom: 1px solid #E7951F;
+    display: inline-block;
+}
+
+#contact form, #estimation form, #conception p, #hebergement p, #responsive p {
+    margin: 2vh 0 2vh 0;
+}
+
+#contact form ul, #estimation form ul {
+    padding: 0;
+}
+
+#contact form li, #estimation form li {
+    margin: 3vh 0;
+}
+
+#contact form label, #estimation form label {
+    margin-bottom: 1vh;
+    display: block;
+}
+
+
+form input, form input {
+    width: 400px;
+    height: 20px;
+}
+
+form input[type=number] {
+    width: 100px;
+}
+
+form textarea, form textarea {
+    width: 50vw;
+    height: 15vh;
+}
+
+/* #alert-container {
+    display: none;
+    font-weight: 600;
+    margin: 5vh 0;
+} */
+
+#alert-container {
+    display: none;
+    font-weight: 600;
+    position: fixed;
+    background: #252525;
+    color: #fff;
+    padding: 5vh 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+#estimation h3 {
+    color: #E7951F;
+    font-style: italic;
+    border-bottom: 1px dotted #252525;
+    padding: 1vh 0;
+}
+
+#estimation .form-part {
+    margin-top: 5vh;
+    width: 80vw;
+}
+
+#services {
+    background: url(../assets/overlay.png), url(../assets/services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 0;
+    color: #fff;
+}
+
+#services header {
+    margin-left: 5vw;
+}
+
+#services #cards {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 5vh;
+    justify-content: center;
+    margin-left: 5vw;
+}
+
+#services #conception-card, #services #hosting-card, #services #responsive-card {
+    margin: 0 3vw;
+    color: #fff;
+    width: 30%;
+}
+
+#services .card-content {
+    padding: 2vh 3vw;
+    background: #AE7947;
+    min-height: 385px;
+    max-height: 385px;
+    user-select: none;
+}
+
+#services .link-container {
+    padding: 1vh 0 1vh 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: #252525;
+    cursor: pointer;
+}
+
+#services .link-container a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#services img {
+    width: 150px;
+    height: 150px;
+    margin-top: 5vh;
+}
+
+#services #conception-card:hover .card-content, #services #hosting-card:hover .card-content, #services #responsive-card:hover .card-content {
+    background: #E7951F;
+    transition: background 0.5s ease-out;
+}
+
+#services #conception-card:hover #conception-link, #services #hosting-card:hover #hosting-link, #services #responsive-card:hover #responsive-link  {
+    background: #fff;
+    transition: background 0.5s ease-out;
+}
+
+#services #conception-card:hover #conception-link a, #services #hosting-card:hover #hosting-link a, #services #responsive-card:hover #responsive-link a {
+    color: #252525;
+    transition: background 0.5s ease-out;
+}
+
+#services #conception-card {
+    flex-direction: column;
+}
+
+#servicesnav {
+    margin-bottom: 10vh;
+}
+
+#servicesnav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 2vw;
+}
+
+#servicesnav li {
+    margin: 0 auto;
+}
+
+#servicesnav img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 1vw;
+}
+
+#servicesnav a {
+    text-decoration: none;
+    color: #E7951F;
+}
+
+#servicesnav a:hover, #topnav a:hover {
+    font-weight: 600;
+}
+
+#conception #conception-list {
+    padding: 0;
+}
+
+#conception #conception-list li {
+    margin: 2vh 0;
+}
+
+#conception #conception-list i {
+    color: #E7951F;
+}
+
+#hebergement h3, #responsive h3 {
+    font-weight: 100;
+}
+
+@media screen and (max-width: 1024px) {
+    footer {
+        flex-direction: column;
+    }
+    footer .contact-details, footer .about {
+        margin: 0 10vw;
+        width: auto;
+    }
+    #copyright-container {
+        flex-direction: column;
+    }
+    #copyright-container .copyright, #copyright-container .links {
+        width: 100%;
+        margin: 2vh 0;
+        text-align: center;
+    }
+    #copyright-container .links i {
+        margin: 0 3vw;
+    }
+    #main header, #contact header, #estimation header {
+        margin-left: unset;
+    }
+    #contact form, #estimation form {
+        margin-left: unset;
+    }
+    #main ul {
+        margin-left: 0;
+        padding: 0;
+    }
+    #main li {
+        margin: 10vh 5vw;
+    }
+    #top {
+        display: none;
+    }
+    #mobilenav {
+        display: block;
+        position: fixed;
+    }
+    form input, form textarea {
+        width: 78vw;
+    }
+    #estimation, #contact, #conception {
+        margin: auto 5vw;
+    }
+    #estimation h1, #contact h1 {
+        margin: auto auto;
+    }
+    #estimation .form-part {
+        width: unset;
+    }
+    #services {
+        padding: 10vh 5vw;
+        text-align: center;
+    }
+    #services header {
+        text-align: left;
+    }
+    #services #cards {
+        flex-direction: column;
+        margin-left: unset;
+    }
+    #services #conception-card, #services #hosting-card, #services #responsive-card {
+        width: 80vw;
+        margin-bottom: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #services .card-content {
+        min-height: unset;
+        max-height: unset;
+    }
+    #servicesnav ul {
+        flex-direction: column;
+    }
+    #servicesnav li {
+        line-height: 50px;
+        margin: 2vh 0;
+        padding: 0;
+    }
+    #conception #conception-list {
+        margin: 10vh 0 10vh 0;
+    }
+}
